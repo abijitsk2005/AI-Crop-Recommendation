@@ -299,8 +299,14 @@ def get_recent_messages():
     }), 200
 
 if __name__ == "__main__":
-    print("="*60)
-    print("AgriAI Flask REST API Backend running on port 5000")
-    print("Direct browser access: http://127.0.0.1:5000/")
-    print("="*60)
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+
+    print("=" * 60)
+    print(f"AgriAI Flask REST API Backend running on port {port}")
+    print("=" * 60)
+
+    app.run(
+        host="0.0.0.0",
+        port=port,
+        debug=False
+    )
