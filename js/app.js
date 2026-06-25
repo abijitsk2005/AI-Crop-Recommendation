@@ -1,7 +1,7 @@
 // Crop Recommendation Platform Core JavaScript
 
 // Base URL for backend prediction server REST API
-const API_BASE = window.location.origin.includes("5000") ? "" : "http://127.0.0.1:5000";
+const API_BASE = window.location.origin;
 
 // Crop Database with Optimal Conditions for Euclidean distance matching
 const cropsDb = [
